@@ -1,0 +1,28 @@
+body{
+	background-color: rgb( 26,32,94 );
+}
+
+h1{
+	text-align: center;
+	color: white;
+}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 170px;
+	color: white;
+	margin: 0.5%;
+	font-size: 14px;
+
+}
+input, select, textarea{
+  display: inline-block;
+  float: left;
+  margin:1%;
+}
+
+button{
+  float:left;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>1328903/1332110/1212891</title>
+	<link rel = "stylesheet" href ="../css/music.css"/>
+</head>
+
+<body >
+<h1> Music <sub><small> (zurück)</small> </sub></h1>
+<div>
+	<form action = "http://martinakraus.net/immdb.php" method = "get">
+	<label>Interpreter</label> <input name ="interpreter" type="text" size="30" 
+	maxlength ="40" /><br/>
+	<label>Albumtitel</label> <input name="albumtitel" type="text" size="30" 
+	maxlength ="40" /><br/>
+	<label>Erscheinungsjahr</label> <input name ="musicerscheinungsjahr" type="text" 
+	size="30" maxlength ="40" /><br/>
+	<label>Songs </label><textarea name = "songs" type="textarea" cols="30" rows = "5"/>
+	</textarea><br/>
+	<label>Genre</label> 
+	<select name="musicgenre" size="1">
+		<option value="Punk" selected ="selected">Punk</option>
+		<option value="Metal">Metal</option>
+		<option value="Pop">Pop</option>
+		<option value="Soul">Soul</option>
+		<option value="HipHop">HipHop</option>
+		<option value="Techno">Techno</option>
+	</select><br/>
+	<label>Als Favorit markieren </label><input type="checkbox" name="musicfavorit"><br/>
+	<label></label><input type="submit" value="Music eintragen">
+	</form>
+</body>
+</html>
