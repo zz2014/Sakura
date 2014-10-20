@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>1328903/1332110/1212891</title>
+	<link rel = "stylesheet" href ="../css/film.css"/>
+</head>
+
+<body >
+<h1> Film <sub><small> (zur√ºck)</small> </sub></h1>
+<div>
+	<form action = "http://martinakraus.net/immdb.php" method = "get">
+	
+<label>Filmtitel</label> <input name ="filmtitel" type="text" size="30" 
+	maxlength ="40" /><br/>
+	
+<label>Regie</label> <input name="regie" type="text" size="30" 
+	maxlength ="40" /><br/>
+	
+<label>Drehbuch</label> <input name ="drehbuch" type="text" 
+	size="30" maxlength ="40" /><br/>
+	
+<label>Erscheinungsjahr </label><input name = "filmerscheinungsjahr" type="text" size="30" maxlength ="40" /><br/>
+
+<label>Schauspieler </label><textarea name = "Schauspieler" type="textarea" cols="30" rows = "5"/>
+	</textarea><br/>
+
+	
+<label>Genre</label> 
+	<select name="filmgenre" size="1">
+		<option value="Punk" selected ="selected">Punk</option>
+		<option value="Horror">Horror</option>
+		<option value="Psycho">Psycho</option>
+		<option value="Krimi">Krimi</option>
+		<option value="Doku">Doku</option>
+		<option value="Komˆdie">Kom&#246;die</option>
+		<option value="Romanze">Romanze</option>
+	</select><br/>
+	
+<label>Als Favorit markieren </label><input type="checkbox" name="filmfavorit"><br/>
+	
+<label></label><input type="submit" value="Film eintragen">
+	</form>
+</body>
+</html>
