@@ -1,5 +1,6 @@
 body{
 	background-color: rgb( 26,32,94 );
+	font-family:'Arial'
 }
 
 h1{
@@ -15,6 +16,7 @@ label{
 	color: white;
 	margin: 0.5%;
 	font-size: 14px;
+    text-indent:2em;
 
 }
 input, select, textarea{
@@ -26,3 +28,4 @@ input, select, textarea{
 button{
   float:left;
 }
+
