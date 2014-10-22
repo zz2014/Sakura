@@ -1,11 +1,20 @@
 body{
 	background-color: rgb( 26,32,94 );
-	font-family:'Arial'
+	font-family:'Arial';
 }
 
 h1{
+	display: inline;
 	text-align: center;
 	color: white;
+	margin-left: 45%;
+	
+
+}
+
+span{
+	color: white;
+	margin-left: 2%;
 }
 
 label{
@@ -27,5 +36,13 @@ input, select, textarea{
 
 button{
   float:left;
+}
+
+img{
+	
+	float: right;
+	margin-right:50px;
+	margin-top: 0%;
+	
 }
 
