@@ -12,9 +12,11 @@ h1{
 
 }
 
-span{
+a{
 	color: white;
 	margin-left: 2%;
+	text-underline: none;
+	text-decoration: none;
 }
 
 label{
