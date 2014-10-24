@@ -7,14 +7,16 @@ h1{
 	display: inline;
 	text-align: center;
 	color: white;
-	margin-left: 45%;
+	margin-left: 25%;
 	
 
 }
 
-span{
+a{
 	color: white;
 	margin-left: 2%;
+	text-underline: none;
+	text-decoration: none;
 }
 
 label{
@@ -24,9 +26,24 @@ label{
     width: 170px;
 	color: white;
 	margin: 0.5%;
+
 	font-size: 14px;
     text-indent:2em;
+	font-weight: bold;
+	
+}
 
+#labellike{
+	display: inline-block;
+    float: left;
+    clear: left;
+    width: 170px;
+	color: white;
+	
+	font-size: 14px;
+    	text-indent:2.5em;
+	font-weight: bold;
+	
 }
 input, select, textarea{
   display: inline-block;

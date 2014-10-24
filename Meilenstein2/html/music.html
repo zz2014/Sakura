@@ -8,8 +8,9 @@
 
 <body >
 <h1> Music</h1>
-<span>(zurück)</span>
-<img src="Meeresschnecke.jpg" width="300" height="250" alt="">
+<a href = "home.html">(zurück)</br>
+<img src="MeeresschneckeSakura.jpg" width="300" height="250" alt="">
+
 <div>
 	<form action = "http://martinakraus.net/immdb.php" method = "get">
 	<label>Interpreter</label> <input name ="interpreter" type="text" size="30" 
@@ -20,17 +21,23 @@
 	size="30" maxlength ="40" /><br/>
 	<label>Songs </label><textarea name = "songs" type="textarea" cols="30" rows = "5"/>
 	</textarea><br/>
+
 	<label>Genre</label> 
 	<select name="musicgenre" size="1">
-		<option value="Punk" selected ="selected">Punk</option>
+		<option value="Punk" selected ="selected">								Punk</option>
 		<option value="Metal">Metal</option>
 		<option value="Pop">Pop</option>
 		<option value="Soul">Soul</option>
 		<option value="HipHop">HipHop</option>
 		<option value="Techno">Techno</option>
 	</select><br/>
-	<label>Als Favorit markieren </label><input type="checkbox" name="musicfavorit"><br/>
-	<label></label><input type="submit" value="Album eintragen">
+
+	<label>Als Favorit <label>markieren</label></label>
+	<input type="checkbox" name="musicfavorit">
+	<br/>
+	
+	<label></label>
+	<input type="submit" value="Album eintragen">
 	</form>
 
 </body>
