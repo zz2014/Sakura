@@ -1,15 +1,14 @@
 body{
 	background-color: rgb( 26,32,94 );
 	font-family:'Arial';
-	font-weight: bold;
-	padding-left: 75px;
+	padding-left: 60px;
 }
 
 h1{
-	display: inline;
+	display: inline-block;
 	text-align: center;
 	color: white;
-	margin-left: 25%;
+	margin: 1% 0% 3% 28%; 
 	font-size: 44px;
 	
 
@@ -23,34 +22,44 @@ a{
 }
 
 label{
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 170px;
+    	display: inline-block;
+   	float: left;
+    	clear: left;
+   	width: 170px;
 	color: white;
 	margin: 0.5%;
 	font-size: 14px;
 	vertical_align: text-bottom;
-    text-align: left;
-	
-}
-
-#labellike{
-	display: inline-block;
-    float: left;
-    clear: left;
-    width: 170px;
-	color: white;
-	
-	font-size: 14px;
-    	text-indent:2.5em;
+    	text-align: left;
 	font-weight: bold;
 	
 }
-input, select, textarea{
+
+
+input{
   display: inline-block;
   float: left;
-  margin:1%;
+  margin:0.5%;
+}
+
+select, textarea{
+  display: inline-block;
+  float: left;
+  margin: 1.5% 0.5%;
+}
+
+#biggerMargin
+{
+	display: inline-block;
+   	float: left;
+    	clear: left;
+   	width: 170px;
+	color: white;
+	margin: 1.5% 0.5%;
+	font-size: 14px;
+	vertical_align: text-bottom;
+    	text-align: left;
+	font-weight: bold;
 }
 
 button{
