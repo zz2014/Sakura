@@ -2,7 +2,7 @@ body{
 	background-color: rgb( 26,32,94 );
 	font-family:'Arial';
 	font-weight: bold;
-	padding-left: 25px;
+	padding-left: 75px;
 	
 }
 
@@ -34,7 +34,8 @@ label{
 	margin: 0.5%;
 	font-size: 14px;
 	vertical-align: text-bottom;
-    text-indent:2em;
+    text-align: left;
+    vertical-align: bottom;
 
 }
 input, select, textarea{

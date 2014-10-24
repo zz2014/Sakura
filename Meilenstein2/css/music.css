@@ -2,6 +2,7 @@ body{
 	background-color: rgb( 26,32,94 );
 	font-family:'Arial';
 	font-weight: bold;
+	padding-left: 75px;
 }
 
 h1{
@@ -28,10 +29,9 @@ label{
     width: 170px;
 	color: white;
 	margin: 0.5%;
-
 	font-size: 14px;
-    text-indent:2em;
-	font-weight: bold;
+	vertical_align: text-bottom;
+    text-align: left;
 	
 }
 
