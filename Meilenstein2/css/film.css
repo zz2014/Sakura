@@ -1,6 +1,8 @@
 body{
 	background-color: rgb( 26,32,94 );
 	font-family:'Arial';
+	font-weight: bold;
+	
 }
 
 h1{
@@ -27,6 +29,7 @@ label{
 	color: white;
 	margin: 0.5%;
 	font-size: 14px;
+	vertical-align: text-bottom;
     text-indent:2em;
 
 }
