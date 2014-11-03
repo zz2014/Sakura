@@ -1,0 +1,77 @@
+body{
+	background-color: rgb( 26,32,94 );
+	font-family:'Arial';
+	padding-left: 75px;
+	
+}
+
+h1{
+	display: inline-block;
+	text-align: center;
+	color: white;
+	margin: 1% 0% 3% 30%; 
+	font-size: 44px;
+	
+
+}
+
+a{
+	color: white;
+	margin-left: 2%;
+	text-underline: none;
+	text-decoration: none;
+}
+
+
+
+label{
+    	display: inline-block;
+   	float: left;
+    	clear: left;
+   	width: 170px;
+	color: white;
+	margin: 0.5%;
+	font-size: 14px;
+	vertical_align: text-bottom;
+    	text-align: left;
+	font-weight: bold;
+
+}
+
+input{
+  display: inline-block;
+  float: left;
+  margin:0.5%;
+}
+
+select, textarea{
+  display: inline-block;
+  float: left;
+  margin:1.5% 0.5%;
+}
+
+.biggerMargin
+{
+	display: inline-block;
+   	float: left;
+    	clear: left;
+   	width: 170px;
+	color: white;
+	margin: 1.5% 0.5%;
+	font-size: 14px;
+	vertical_align: text-bottom;
+    	text-align: left;
+	font-weight: bold;
+}
+
+button{
+  float:left;
+}
+
+img{
+	
+	float: right;
+	margin-right:50px;
+	margin-top: 0%;
+	
+}
