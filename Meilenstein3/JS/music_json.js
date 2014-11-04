@@ -1,7 +1,5 @@
-
-var data= {
-	"Alben":[
-      {
+var musicdata={
+   "Alben": [  {
         "Interpreter": "Farin Urlaub",
         "Albumtitel": "Faszination Weltraum",
         "Erscheinungsjahr": "2014",
@@ -63,47 +61,5 @@ var data= {
       }
 	  ]
 }
-//append table heads and data to the table
-function buildTable(){
-	// get table element from html
-	var myTable = document.getElementById('myTable');
-	// add all the table heads first
-	addTableHeads(myTable);
-	// get all the keys
-	var heads = getHeads();
-	// loop through the list and add the value of keys
-	for (var j=0;j<data.Alben.length;j++){
-		var tr= document.createElement('tr').cloneNode(false);
-		// loop through the keys
-		for(var i = 0;	i<heads.length;i++){
-			var td = document.createElement('td').cloneNode(false);
-			// get the value of the key and add them
-			td.appendChild(document.createTextNode(data.Alben[j][heads[i]]));
-			tr.appendChild(td);
-			}
-		myTable.appendChild(tr);
-	}
-}
-// create the table heads and append them to the table 
-function addTableHeads(table){
-	var tr= document.createElement('tr').cloneNode(false);
-	var heads = getHeads(data);
-	for(var i = 0;	i<heads.length;i++){
-		var th = document.createElement('th').cloneNode(false);
-		th.appendChild(document.createTextNode(heads[i]));
-		tr.appendChild(th);
-	}
-	table.appendChild(tr);
-}
-// get all the property keys from JSON data
-function getHeads(){
-	// heads is going to be returned as array
-	var heads = new Array();
-	// looke into one entity in albums and collect heads
-	var album= data.Alben[0];
-	for(var key in album){
-		heads.push(key);
-	}
-	return heads;
-}
+
 

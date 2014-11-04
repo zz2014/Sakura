@@ -4,11 +4,21 @@
 	<meta charset="utf-8"/>
 	<title>1328903/1332110/1212891</title>
 	<script src="../js/music_json.js"></script>
+		<script src="../js/film_json.js"></script>
+		<script src="../js/control.js"></script>
+		<link rel = "stylesheet" href ="../css/favoriten.css"/>
 </head>
-<body onload ="buildTable()" >
- <table id = "myTable" border ="1">
+<body onload ="init()" >
+ <table id = "filmTable" border ="1">
  </table>
-
+ <table id = "musicTable" border ="1">
+ </table>
+<div onclick ="switchtofilm()">
+click film
+</div>
+<div onclick ="switchtomusic()">
+click music
+<div>
 </body>
 
 

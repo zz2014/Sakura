@@ -1,3 +1,4 @@
+//two tables will be built when loading the page
 function init(){
 buildMusicTable();
 buildFilmTable();
@@ -15,7 +16,6 @@ function switchtomusic(){
 function buildFilmTable(){
 	var filmen = filmdata["Filmen"];
 	var myTable = document.getElementById('filmTable');
-	// get table element from html
 	// add all the table heads first
 	addTableHeads(filmen,myTable);
 	// get all the keys
@@ -32,6 +32,7 @@ function buildFilmTable(){
 			}
 		myTable.appendChild(tr);
 	}
+	// filmtable should be invisible at first
 	myTable.style.display = "none";
 }
 
@@ -70,9 +71,9 @@ function addTableHeads(data,table){
 }
 // get all the property keys from JSON data
 function getHeads(data){
-	// heads is going to be returned as array
+	// heads are going to be returned as array
 	var heads = new Array();
-	// looke into one entity in albums and collect heads
+	// look into one entity in data and collect heads
 	var item= data[0];
 	for(var key in item){
 		heads.push(key);
