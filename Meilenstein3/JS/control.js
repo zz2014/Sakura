@@ -32,6 +32,9 @@ function buildFilmTable(){
 		// loop through the keys
 		for(var i = 0;	i<heads.length;i++){
 			var td = document.createElement('td').cloneNode(false);
+			if(i==1){
+			td.className="title";
+			}
 			// get the value of the key and add them
 			td.appendChild(document.createTextNode(filmen[j][heads[i]]));
 			tr.appendChild(td);
@@ -57,7 +60,10 @@ function buildMusicTable(){
 		// loop through the keys
 		for(var i = 0;	i<heads.length;i++){
 			var td = document.createElement('td').cloneNode(false);
-			// get the value of the key and add them
+			// get the value of the key and add themi
+			if(i==1){
+			td.className="title";
+			}
 			td.appendChild(document.createTextNode(alben[j][heads[i]]));
 			tr.appendChild(td);
 			}
