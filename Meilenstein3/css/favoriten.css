@@ -56,7 +56,6 @@ img{
 
 #leftbox:hover{
 	background-color: rgb(165,169,230);
-
 }
 #rightbox{
 	float: left;
@@ -79,14 +78,6 @@ img{
 	width:100%;
 }
 
-
-.visible{
-	visibility: visible;
-}
-.unvisible{
-	visibility: hidden;
-}
-
 p{
 	font-size : 16px;
 	color: white;
@@ -99,11 +90,14 @@ td{
 	border-right: 8px solid white;
 	color: white;
 	text-align: center;
+	padding: 8px;
 }
 
 th{
 	color: rgb(136,0,21);
 	border: 8px solid white;
+	padding: 8px;
+
 }
 .blue {
  color: rgb(0,162,232);

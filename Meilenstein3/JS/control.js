@@ -4,6 +4,7 @@ buildMusicTable();
 buildFilmTable();
 document.getElementById("rightbox").style.background="rgb(0,162,232)";
 document.getElementById("rightbox").firstElementChild.style.color="black";
+document.getElementById('musicTable').style.display = "none";
 
 }
 
