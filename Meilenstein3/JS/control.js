@@ -37,12 +37,7 @@ function buildFilmTable(){
 			tr.appendChild(td);
 			}
 		myTable.appendChild(tr);
-<<<<<<< HEAD
-	}	
-=======
 	}
-	// filmtable should be invisible at first
->>>>>>> 9c07eb7d8fd734ccdb96fd4098739e408199cd7e
 }
 
 //append table heads and data to the table
