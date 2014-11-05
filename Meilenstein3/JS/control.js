@@ -19,26 +19,24 @@ function switchtomusic(){
 //append table heads and data to the table
 function buildFilmTable(){
 
-	var filmen = filmdata["Filme"];
+	var filme = filmdata["Filme"];
 	var myTable = document.getElementById('filmTable');
 	// add all the table heads first
-	addTableHeads(filmen,myTable);
+	addTableHeads(filme,myTable);
 	// get all the keys
-	var heads = getHeads(filmen);
+	var heads = getHeads(filme);
 	// loop through the list and add the value of keys
-	for (var j=0;j<filmen.length;j++){
+	for (var j=0;j<filme.length;j++){
 		var tr= document.createElement('tr').cloneNode(false);
 		// loop through the keys
 		for(var i = 0;	i<heads.length;i++){
 			var td = document.createElement('td').cloneNode(false);
 			// get the value of the key and add them
-			td.appendChild(document.createTextNode(filmen[j][heads[i]]));
+			td.appendChild(document.createTextNode(filme[j][heads[i]]));
 			tr.appendChild(td);
 			}
 		myTable.appendChild(tr);
-	}
-	// filmtable should be invisible at first
-	myTable.style.display = "none";
+	}	
 }
 
 //append table heads and data to the table
