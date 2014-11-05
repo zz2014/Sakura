@@ -5,15 +5,20 @@ buildFilmTable();
 }
 
 function switchtofilm(){
+	document.getElementById("leftbox").style.background="rgb(26,32,94)";
+	document.getElementById("rightbox").style.background="rgb(0,162,232)";
 	document.getElementById('filmTable').style.display = "table";
 	document.getElementById('musicTable').style.display = "none";
 }
 function switchtomusic(){
+	document.getElementById("leftbox").style.background="rgb(0,162,232)";
+	document.getElementById("rightbox").style.background="rgb(26,32,94)";
 	document.getElementById('filmTable').style.display = "none";
 	document.getElementById('musicTable').style.display = "table";
 }
 //append table heads and data to the table
 function buildFilmTable(){
+
 	var filmen = filmdata["Filmen"];
 	var myTable = document.getElementById('filmTable');
 	// add all the table heads first
@@ -38,6 +43,7 @@ function buildFilmTable(){
 
 //append table heads and data to the table
 function buildMusicTable(){
+
 	var alben = musicdata["Alben"];
 	// get table element from html
 	var myTable = document.getElementById('musicTable');
