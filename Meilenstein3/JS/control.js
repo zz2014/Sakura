@@ -3,75 +3,72 @@ function init(){
 buildMusicTable();
 buildFilmTable();
 document.getElementById("rightbox").style.background="rgb(0,162,232)";
+document.getElementById("rightbox").firstElementChild.style.color="black";
+
 }
 
-function switchtofilm(){
-	document.getElementById("leftbox").style.background="rgb(26,32,94)";
-	document.getElementById("rightbox").style.background="rgb(0,162,232)";
+function switchlist (that){
+	var music = document.getElementById("leftbox");
+	var film = document.getElementById("rightbox")
+	if(that.id == "rightbox"){
+	music.style.background="rgb(26,32,94)";
+	film.style.background="rgb(0,162,232)";
+	music.firstElementChild.style.color ="white";
+	film.firstElementChild.style.color ="black";
 	document.getElementById('filmTable').style.display = "table";
 	document.getElementById('musicTable').style.display = "none";
-}
-function switchtomusic(){
-	document.getElementById("leftbox").style.background="rgb(0,162,232)";
-	document.getElementById("rightbox").style.background="rgb(26,32,94)";
+
+	} else{  
+	film.style.background="rgb(26,32,94)";
+	music.style.background="rgb(0,162,232)";
+	music.firstElementChild.style.color ="black";
+	film.firstElementChild.style.color ="white";
+
 	document.getElementById('filmTable').style.display = "none";
 	document.getElementById('musicTable').style.display = "table";
+	}
 }
 //append table heads and data to the table
 function buildFilmTable(){
 
-	var filme = filmdata["Filme"];
+	var filmen = filmdata["Filme"];
 	var myTable = document.getElementById('filmTable');
-	// add all the table heads first
-	addTableHeads(filme,myTable);
-	// get all the keys
-	var heads = getHeads(filme);
-	// loop through the list and add the value of keys
-	for (var j=0;j<filme.length;j++){
-		var tr= document.createElement('tr').cloneNode(false);
-		// loop through the keys
-		for(var i = 0;	i<heads.length;i++){
-			var td = document.createElement('td').cloneNode(false);
-			if(i==1){
-			td.className="title";
-			}
-			// get the value of the key and add them
-			td.appendChild(document.createTextNode(filme[j][heads[i]]));
-			tr.appendChild(td);
-			}
-		myTable.appendChild(tr);
+	buildTable(filmen, myTable);
+
 	}
-}
-
-//append table heads and data to the table
+	
+	//append table heads and data to the table
 function buildMusicTable(){
-
 	var alben = musicdata["Alben"];
 	// get table element from html
 	var myTable = document.getElementById('musicTable');
-	// add all the table heads first
-	addTableHeads(alben,myTable);
+	buildTable(alben, myTable);
+
+}
+
+function buildTable(data, table){
+// add all the table heads first
+	addTableHeads(data,table);
 	// get all the keys
-	var heads = getHeads(alben);
+	var heads = getHeads(data);
 	// loop through the list and add the value of keys
-	for (var j=0;j<alben.length;j++){
+	for (var j=0;j<data.length;j++){
 		var tr= document.createElement('tr').cloneNode(false);
 		// loop through the keys
 		for(var i = 0;	i<heads.length;i++){
 			var td = document.createElement('td').cloneNode(false);
-			// get the value of the key and add themi
-			if(i==1){
-			td.className="title";
-			}
-			td.appendChild(document.createTextNode(alben[j][heads[i]]));
+			// get the value of the key and add them
+			td.appendChild(document.createTextNode(data[j][heads[i]]));
 			tr.appendChild(td);
 			}
-		myTable.appendChild(tr);
+		var children = tr.childNodes;
+		children[1].className ="blue";
+		table.appendChild(tr);
 	}
-		myTable.style.display = "none";
-
-	// musictable should be invisible at first
+	// filmtable should be invisible at first
 }
+
+
 // create the table heads and append them to the table 
 function addTableHeads(data,table){
 	var tr= document.createElement('tr').cloneNode(false);
