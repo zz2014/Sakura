@@ -2,6 +2,7 @@
 function init(){
 buildMusicTable();
 buildFilmTable();
+document.getElementById("rightbox").style.background="rgb(0,162,232)";
 }
 
 function switchtofilm(){
@@ -36,7 +37,12 @@ function buildFilmTable(){
 			tr.appendChild(td);
 			}
 		myTable.appendChild(tr);
+<<<<<<< HEAD
 	}	
+=======
+	}
+	// filmtable should be invisible at first
+>>>>>>> 9c07eb7d8fd734ccdb96fd4098739e408199cd7e
 }
 
 //append table heads and data to the table
@@ -61,8 +67,9 @@ function buildMusicTable(){
 			}
 		myTable.appendChild(tr);
 	}
+		myTable.style.display = "none";
+
 	// musictable should be invisible at first
-	myTable.style.display = "none";
 }
 // create the table heads and append them to the table 
 function addTableHeads(data,table){
