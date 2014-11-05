@@ -19,7 +19,7 @@ function switchtomusic(){
 //append table heads and data to the table
 function buildFilmTable(){
 
-	var filmen = filmdata["Filmen"];
+	var filmen = filmdata["Filme"];
 	var myTable = document.getElementById('filmTable');
 	// add all the table heads first
 	addTableHeads(filmen,myTable);
@@ -63,6 +63,8 @@ function buildMusicTable(){
 			}
 		myTable.appendChild(tr);
 	}
+	// musictable should be invisible at first
+	myTable.style.display = "none";
 }
 // create the table heads and append them to the table 
 function addTableHeads(data,table){

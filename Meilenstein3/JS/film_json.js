@@ -20,7 +20,7 @@ var filmdata= {
         "Regie": "Michael Laux",
         "Drehbuch": "Michael Laux",
         "Erscheinungsjahr": "1995",
-		"Genre": "Komodie"
+		"Genre": "Komödie"
       }, 
 	  {
         "Filmtitel": "Inglorious Basterds",
@@ -51,25 +51,39 @@ var filmdata= {
 		"Genre": "Romanze"
       },
 	   {
-        "Filmtitel": "",
-        "Regie": "",
-        "Drehbuch": "",
-        "Erscheinungsjahr": "",
-		"Genre": ""
+        "Filmtitel": "Tatsächlich ... Liebe",
+        "Regie": "Richard Curtis",
+        "Drehbuch": "Richard Curtis",
+        "Erscheinungsjahr": "2003",
+		"Genre": "Romanze"
       },
 	   {
-        "Filmtitel": "",
-        "Regie": "",
-        "Drehbuch": "",
-        "Erscheinungsjahr": "",
-		"Genre": ""
+        "Filmtitel": "Crank",
+        "Regie": "Mark Neveldine",
+        "Drehbuch": "Mark Neveldine",
+        "Erscheinungsjahr": "2006",
+		"Genre": "Komödie"
       },
 	   {
-        "Filmtitel": "",
-        "Regie": "",
-        "Drehbuch": "",
-        "Erscheinungsjahr": "",
-		"Genre": ""
+        "Filmtitel": "Snatch",
+        "Regie": "Guy Ritchie",
+        "Drehbuch": "Guy Ritchie",
+        "Erscheinungsjahr": "2000",
+		"Genre": "Komödie"
+      },
+	  {
+        "Filmtitel": "Trainspotting",
+        "Regie": "Danny Boyle",
+        "Drehbuch": "John Hodge",
+        "Erscheinungsjahr": "1996",
+		"Genre": "Komödie"
+      },
+	  {
+        "Filmtitel": "The Transporter",
+        "Regie": "Louis Leterrier",
+        "Drehbuch": "Luc Besson",
+        "Erscheinungsjahr": "2002",
+		"Genre": "Krimi"
       }
 	  ]
 }
