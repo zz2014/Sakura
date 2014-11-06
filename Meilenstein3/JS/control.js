@@ -1,31 +1,83 @@
+
+var filmselected = true;
+var musicselected = false;
+
 //two tables will be built when loading the page
 function init(){
 buildMusicTable();
 buildFilmTable();
 document.getElementById("rightbox").style.background="rgb(0,162,232)";
 document.getElementById("rightbox").firstElementChild.style.color="black";
+document.getElementById('filmTable').style.display = "table";
+document.getElementById('musicTable').style.display = "none";
 
 }
 
+function unhover (that)
+{
+	var box;
+	
+	if(that.id == "leftbox" && musicselected == false)
+	{
+		box = document.getElementById("leftbox");
+		box.style.backgroundColor = "rgb(26,32,94)";
+		box.firstElementChild.style.color = "white";
+		
+	
+	}
+	else{
+		if(filmselected == false)
+		{
+			box = document.getElementById("rightbox");
+			box.style.backgroundColor = "rgb(26,32,94)";
+			box.firstElementChild.style.color = "white";
+		}
+	}
+}
+
+function hover(that)
+{
+	var box;
+	
+	if(that.id == "leftbox" && musicselected == false)
+	{
+		box = document.getElementById("leftbox");
+		box.style.backgroundColor = "rgb(165, 169, 230)";
+		box.firstElementChild.style.color = "black";
+		
+	
+	}
+	else{
+		if(filmselected == false)
+		{
+			box = document.getElementById("rightbox");
+			box.style.backgroundColor = "rgb(165, 169, 230)";
+			box.firstElementChild.style.color = "black";
+		}
+	}
+
+}
 function switchlist (that){
 	var music = document.getElementById("leftbox");
-	var film = document.getElementById("rightbox")
-	if(that.id == "rightbox"){
+	var film = document.getElementById("rightbox");
+	if(that.id == "rightbox"){										//falls rechte Box angeklickt
 	music.style.background="rgb(26,32,94)";
 	film.style.background="rgb(0,162,232)";
 	music.firstElementChild.style.color ="white";
 	film.firstElementChild.style.color ="black";
 	document.getElementById('filmTable').style.display = "table";
 	document.getElementById('musicTable').style.display = "none";
-
+	filmselected = true;
+	musicselected = false;
 	} else{  
 	film.style.background="rgb(26,32,94)";
 	music.style.background="rgb(0,162,232)";
 	music.firstElementChild.style.color ="black";
 	film.firstElementChild.style.color ="white";
-
 	document.getElementById('filmTable').style.display = "none";
 	document.getElementById('musicTable').style.display = "table";
+	filmselected = false;
+	musicselected = true;
 	}
 }
 //append table heads and data to the table

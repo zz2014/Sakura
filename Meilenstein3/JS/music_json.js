@@ -6,7 +6,7 @@ var musicdata={
         "Genre": "Punk"
       },
       {
-        "Interpreter": "Die Ã„zte",
+        "Interpreter": "Die Äzte",
         "Albumtitel": "Planet Punk",
         "Erscheinungsjahr": "1995",
         "Genre": "Punk"
@@ -61,5 +61,3 @@ var musicdata={
       }
 	  ]
 }
-
-

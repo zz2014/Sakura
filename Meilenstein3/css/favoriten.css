@@ -1,16 +1,27 @@
 body{
 	background-color : rgb(26,32,94);
 	font-family: "Arial";
+	padding: 0%;
+	margin: 0%;
 }
 
 h1{
 	color: white;
 	font-size: 36px;
-	text-align: center;
+	margin-left: 31%;
+	
+	
 }
 
 .buttontext:hover{
 	font-size : 16px;
+	font-weight: bold;
+	color: black;
+	text-align: center;
+}
+
+.buttontextselect{
+	font-size : 1px;
 	font-weight: bold;
 	color: black;
 	text-align: center;
@@ -27,46 +38,61 @@ div span{
 table {
 	border: 8px solid white;
 	border-collapse: collapse;
-	margin: 15%;
-	margin-right: auto;
-	margin-left: auto;
-	text-align: left;
+	margin: 0 auto;
+	
+	
 }
+#tables {
+
+	margin-top: 8%;
+	margin-right: 22%;
+	margin-left: 5%;
+	margin-bottom: 10%;
+	
+	
+	
+}
+
+
 
 img{
 	
 	float: right;
-	margin-right:50px;
-	margin-top: 0%;
+	margin-right:35px;
+	margin-top: 0px
+	
+	
 	
 }
 
 #leftbox{
 	float: left; 	/*bewirkt, dass sie nebeneinander stehen*/
-	width: 300px;
+	width: 250px;
 	height:50px;
-	margin-left: 100px;
+	margin-left: 20%;
 	margin-top: 50px;
+	margin-bottom: 50px;
 	border: 8px solid white;
 	border-right: 1px solid white;
-	position: absolute;
-	right: 50%
+	display: inline-block;
+	
+	
 	
 }
 
 #leftbox:hover{
 	background-color: rgb(165,169,230);
-
 }
 #rightbox{
 	float: left;
-	width: 300px;
+	width: 250px;
 	height:50px;
 	margin-top: 50px;
+	margin-bottom: 50px;
 	border: 8px solid white;
 	border-left: 1px solid white;
-	position: absolute;
-	left: 50%
+	
+	
 
 }
 
@@ -77,14 +103,6 @@ img{
 
 .content{
 	width:100%;
-}
-
-
-.visible{
-	visibility: visible;
-}
-.unvisible{
-	visibility: hidden;
 }
 
 p{
@@ -98,12 +116,15 @@ td{
 	border-bottom: 4px solid white;
 	border-right: 8px solid white;
 	color: white;
-	text-align: center;
+	padding: 4px 25px 4px 15px;
 }
 
 th{
 	color: rgb(136,0,21);
 	border: 8px solid white;
+	padding-left: 21px;
+	padding-right: 68px;
+	
 }
 .blue {
  color: rgb(0,162,232);
