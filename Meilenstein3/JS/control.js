@@ -10,7 +10,6 @@ document.getElementById("rightbox").style.background="rgb(0,162,232)";
 document.getElementById("rightbox").firstElementChild.style.color="black";
 document.getElementById('filmTable').style.display = "table";
 document.getElementById('musicTable').style.display = "none";
-
 }
 
 function unhover (that)
@@ -60,7 +59,7 @@ function hover(that)
 function switchlist (that){
 	var music = document.getElementById("leftbox");
 	var film = document.getElementById("rightbox");
-	if(that.id == "rightbox"){										//falls rechte Box angeklickt
+	if(that.id == "rightbox"){//falls rechte Box angeklickt
 	music.style.background="rgb(26,32,94)";
 	film.style.background="rgb(0,162,232)";
 	music.firstElementChild.style.color ="white";
