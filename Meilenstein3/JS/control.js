@@ -25,7 +25,7 @@ function unhover (that)
 	
 	}
 	else{
-		if(filmselected == false)
+		if(that.id == "rightbox" && filmselected == false)
 		{
 			box = document.getElementById("rightbox");
 			box.style.backgroundColor = "rgb(26,32,94)";
@@ -47,7 +47,7 @@ function hover(that)
 	
 	}
 	else{
-		if(filmselected == false)
+		if(that.id == "rightbox" && filmselected == false)
 		{
 			box = document.getElementById("rightbox");
 			box.style.backgroundColor = "rgb(165, 169, 230)";
