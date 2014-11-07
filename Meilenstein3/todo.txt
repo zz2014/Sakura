@@ -3,4 +3,3 @@ Kommentare
 th gleichmäßiger Abstand
 Schriftgröße kleiner, wenn selectet
 Firefox
-Home Buttons zurechtrücken

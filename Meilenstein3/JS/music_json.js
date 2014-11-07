@@ -1,4 +1,4 @@
-var musicdata={
+﻿var musicdata={
    "Alben": [  {
         "Interpreter": "Farin Urlaub",
         "Albumtitel": "Faszination Weltraum",
@@ -6,7 +6,7 @@ var musicdata={
         "Genre": "Punk"
       },
       {
-        "Interpreter": "Die �zte",
+        "Interpreter": "Die Ärzte",
         "Albumtitel": "Planet Punk",
         "Erscheinungsjahr": "1995",
         "Genre": "Punk"
