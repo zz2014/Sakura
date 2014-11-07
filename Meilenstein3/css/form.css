@@ -74,11 +74,33 @@ select, textarea{
 	font-weight: bold;
 }
 
-button{
-  float:left;
+
+#favlink {
+      display:block;
+      color:white;
+      background-color:transparent;
+      width:180px;
+      padding:7px;
+      font-size:14px;
+      font-weight:bold;
+      text-align:center;
+	  margin-left:28%;
+	  margin-bottom: 3%;
+      }
+      
+ #favlink:hover {
+      display:block;
+      color:#fff;
+      background-image:url(../image/Flechten2_crop.jpg);
+      }
+
+
+p{
+	position: absolute;
+	
 }
 
-img{
+#logo{
 	
 	float: right;
 	margin-right:50px;
