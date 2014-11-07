@@ -1,5 +1,0 @@
-Favoriten rechter Button
-Kommentare 
-th gleichmäßiger Abstand
-Schriftgröße kleiner, wenn selectet
-Firefox
