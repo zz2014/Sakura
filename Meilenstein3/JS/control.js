@@ -16,16 +16,14 @@ function unhover (that)
 {
 	var box;
 	
-	if(that.id == "leftbox" && musicselected == false)
+	if(that.id == "leftbox" && musicselected == false)		//cancels hover effect of the left box
 	{
 		box = document.getElementById("leftbox");
 		box.style.backgroundColor = "rgb(26,32,94)";
 		box.firstElementChild.style.color = "white";
-		
-	
 	}
 	else{
-		if(that.id == "rightbox" && filmselected == false)
+		if(that.id == "rightbox" && filmselected == false)		//cancels hover effect of the right box
 		{
 			box = document.getElementById("rightbox");
 			box.style.backgroundColor = "rgb(26,32,94)";
@@ -34,6 +32,7 @@ function unhover (that)
 	}
 }
 
+// changes the colors of the boxes
 function hover(that)
 {
 	var box;
@@ -43,8 +42,6 @@ function hover(that)
 		box = document.getElementById("leftbox");
 		box.style.backgroundColor = "rgb(165, 169, 230)";
 		box.firstElementChild.style.color = "black";
-		
-	
 	}
 	else{
 		if(that.id == "rightbox" && filmselected == false)
@@ -54,51 +51,51 @@ function hover(that)
 			box.firstElementChild.style.color = "black";
 		}
 	}
-
 }
+
+//switches between music table and film table
 function switchlist (that){
 	var music = document.getElementById("leftbox");
 	var film = document.getElementById("rightbox");
-	if(that.id == "rightbox"){//falls rechte Box angeklickt
-	music.style.background="rgb(26,32,94)";
-	film.style.background="rgb(0,162,232)";
-	music.firstElementChild.style.color ="white";
-	film.firstElementChild.style.color ="black";
-	document.getElementById('filmTable').style.display = "table";
-	document.getElementById('musicTable').style.display = "none";
-	filmselected = true;
-	musicselected = false;
+	
+	if(that.id == "rightbox"){									//if right box is selected
+		music.style.background="rgb(26,32,94)";
+		film.style.background="rgb(0,162,232)";
+		music.firstElementChild.style.color ="white";
+		film.firstElementChild.style.color ="black";
+		document.getElementById('filmTable').style.display = "table";
+		document.getElementById('musicTable').style.display = "none";
+		filmselected = true;
+		musicselected = false;
 	} else{  
-	film.style.background="rgb(26,32,94)";
-	music.style.background="rgb(0,162,232)";
-	music.firstElementChild.style.color ="black";
-	film.firstElementChild.style.color ="white";
-	document.getElementById('filmTable').style.display = "none";
-	document.getElementById('musicTable').style.display = "table";
-	filmselected = false;
-	musicselected = true;
+		film.style.background="rgb(26,32,94)";
+		music.style.background="rgb(0,162,232)";
+		music.firstElementChild.style.color ="black";
+		film.firstElementChild.style.color ="white";
+		document.getElementById('filmTable').style.display = "none";
+		document.getElementById('musicTable').style.display = "table";
+		filmselected = false;
+		musicselected = true;
 	}
 }
+
 //append table heads and data to the table
 function buildFilmTable(){
-
-	var filmen = filmdata["Filme"];
+	var filme = filmdata["Filme"];
 	var myTable = document.getElementById('filmTable');
-	buildTable(filmen, myTable);
-
-	}
+	buildTable(filme, myTable);
+}
 	
-	//append table heads and data to the table
+//append table heads and data to the table
 function buildMusicTable(){
 	var alben = musicdata["Alben"];
 	// get table element from html
 	var myTable = document.getElementById('musicTable');
 	buildTable(alben, myTable);
-
 }
 
 function buildTable(data, table){
-// add all the table heads first
+	// add all the table heads first
 	addTableHeads(data,table);
 	// get all the keys
 	var heads = getHeads(data);
@@ -131,6 +128,7 @@ function addTableHeads(data,table){
 	}
 	table.appendChild(tr);
 }
+
 // get all the property keys from JSON data
 function getHeads(data){
 	// heads are going to be returned as array
