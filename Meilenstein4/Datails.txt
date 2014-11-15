@@ -1,0 +1,7 @@
+Music Validation
+->validateForms.js
+	-> isValidSongs funktioniert nicht, liegt möglicherweise daran, 
+	   dass es sich um eine textarea und kein input handelt.
+	   Auf jeden Fall funktioniert die if-Abfrage nicht.
+	-> zum leichteren Testen liefern die restlichen Funktionen alle true zurück.
+	-> roter Rand fehlt
