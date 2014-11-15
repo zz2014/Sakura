@@ -1,4 +1,4 @@
-
+ï»¿
 var filmdata= {
 	"Filme":[
       {
@@ -6,7 +6,7 @@ var filmdata= {
         "Regie": "Stanley",
         "Drehbuch": "Stanley Kubrick",
         "Erscheinungsjahr": "1971",
-		"Genre": "Komödie"
+		"Genre": "KomÃ¶die"
       },
       {
         "Filmtitel": "Love Exposure",
@@ -20,14 +20,14 @@ var filmdata= {
         "Regie": "Michael Laux",
         "Drehbuch": "Michael Laux",
         "Erscheinungsjahr": "1995",
-		"Genre": "Komödie"
+		"Genre": "KomÃ¶die"
       }, 
 	  {
         "Filmtitel": "Inglorious Basterds",
         "Regie": "Quentin Tarantino",
         "Drehbuch": "Quentin Tarantino",
         "Erscheinungsjahr": "2009",
-		"Genre": "Komödie"
+		"Genre": "KomÃ¶die"
       }, 
 	  {
         "Filmtitel": "Pulp Fiction",
@@ -37,21 +37,21 @@ var filmdata= {
 		"Genre": "Psycho"
       }, 
 	  {
-        "Filmtitel": "Léon - der Profi",
+        "Filmtitel": "LÃ©on - der Profi",
         "Regie": "Luc Besson",
         "Drehbuch": "Luc Besson",
         "Erscheinungsjahr": "1994",
 		"Genre": "Romanze"
       },
 	   {
-        "Filmtitel": "Das Schicksal ist ein mieser Verräter",
+        "Filmtitel": "Das Schicksal ist ein mieser VerrÃ¤ter",
         "Regie": "Josh Boone",
-        "Drehbuch": "Scott Neustädter",
+        "Drehbuch": "Scott NeustÃ¤dter",
         "Erscheinungsjahr": "2014",
 		"Genre": "Romanze"
       },
 	   {
-        "Filmtitel": "Tatsächlich ... Liebe",
+        "Filmtitel": "TatsÃ¤chlich ... Liebe",
         "Regie": "Richard Curtis",
         "Drehbuch": "Richard Curtis",
         "Erscheinungsjahr": "2003",
@@ -62,21 +62,21 @@ var filmdata= {
         "Regie": "Mark Neveldine",
         "Drehbuch": "Mark Neveldine",
         "Erscheinungsjahr": "2006",
-		"Genre": "Komödie"
+		"Genre": "KomÃ¶die"
       },
 	   {
         "Filmtitel": "Snatch",
         "Regie": "Guy Ritchie",
         "Drehbuch": "Guy Ritchie",
         "Erscheinungsjahr": "2000",
-		"Genre": "Komödie"
+		"Genre": "KomÃ¶die"
       },
 	  {
         "Filmtitel": "Trainspotting",
         "Regie": "Danny Boyle",
         "Drehbuch": "John Hodge",
         "Erscheinungsjahr": "1996",
-		"Genre": "Komödie"
+		"Genre": "KomÃ¶die"
       },
 	  {
         "Filmtitel": "The Transporter",
