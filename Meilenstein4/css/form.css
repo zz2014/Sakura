@@ -16,14 +16,24 @@ h1{
 }
 
 #favlink{
-	color: red;
-	font-size: 16px;
-	text-underline: none;
-	text-decoration: none;
-	margin-left: 30%;
-	margin-bottom: 3%;
-	font-weight: bold;
+	display:block;
+      color:white;
+      background-color:transparent;
+      width:180px;
+      padding:7px;
+      font-size:14px;
+      font-weight:bold;
+      text-decoration: none;
+      text-align:center;
+	margin-left:28%;
+	margin-bottom: 3%;;
 }
+
+#favlink:hover {
+      display:block;
+      color:#fff;
+      background-image:url(../image/Flechten2_crop.jpg);
+      }
 
 #zurueck{
 	color: white;
@@ -35,14 +45,15 @@ h1{
 
 
 label{
-    display: inline-block;
+   display: inline-block;
    	float: left;
-    clear: left;
+    	clear: left;
    	width: 170px;
 	color: white;
 	margin: 0.5%;
 	font-size: 14px;
-    text-align: left;
+	vertical_align: text-bottom;
+    	text-align: left;
 	font-weight: bold;
 
 }
@@ -81,13 +92,19 @@ button{
   float:left;
 }
 
-img{
+#logo{
 	
 	float: right;
 	margin-right:50px;
 	margin-top: 0%;
 	
 }
+
+p{
+	position: absolute;
+	
+}
+
 .error{
 		 border: 3px solid red;
 }
