@@ -68,7 +68,7 @@ select, textarea{
 {
 	display: inline-block;
    	float: left;
-    	clear: left;
+    clear: left;
    	width: 170px;
 	color: white;
 	margin: 1.5% 0.5%;
@@ -88,4 +88,6 @@ img{
 	margin-right:50px;
 	margin-top: 0%;
 	
+}
+.error{
 }

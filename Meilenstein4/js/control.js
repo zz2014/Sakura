@@ -143,17 +143,22 @@ function getHeads(data){
 	return heads;
 }
 
+//to validate the input according to the id of the table
 function validateForm(that){
+
+//if the id is the film table
 	if(that.id=="filmform"){
+	
 		if(checkFilmForm()){
-		/* 	window.onbeforeunload =function(){
-			}; */
+		//redirect the window to php page
 			window.location = "http://martinakraus.net/immdb.php";
 			return true;
 		} else{
+		// stop redirecting
 			return false;
 		}
 		} 
+		// to be implemented
 /* 	else {
 		if(checkMusicForm()){
 			window.onbeforeunload =function(){
@@ -169,23 +174,28 @@ function validateForm(that){
 
 function checkFilmForm(){
 	var input = document.forms["filmform"]["filmtitel"];
+	// check titel with regular expression
 	var form = /[^a-zA-Z0-9]/;
 	 if(form.test(input.value) ){ 
 		alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
 		input.focus();
 		input.className = "error";
 		return false;
-		}esle{
-		
 		}
- 	input = document.forms["filmform"]["regie"];
+ 	/* input = document.forms["filmform"]["regie"];
 	var form = /[a-zA-Z]+\s+[a-zA-z]+/;
 	 if(form.test(input.value)){
 	 	alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
 		input.focus();
 		return false;
-	 } 
+	 }  */
 	return true;
+}
+
+function clearClass(){
+var input = document.getElementsByTagName("input");
+input.className = "";
+
 }
 /* function checkMusicForm(){
 
