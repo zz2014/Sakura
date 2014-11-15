@@ -17,7 +17,7 @@
 <div>
 	<form action = "http://martinakraus.net/immdb.php" method = "get" name="musicForm" onsubmit="return validateMusicForm()">
 	<label>Interpreter</label> <input name ="interpreter" type="text" size="30" 
-	maxlength ="40" /><br/>
+	maxlength ="40" onblur="removeClass(this)" /><br/>
 	<label>Albumtitel</label> <input name="albumtitel" type="text" size="30" 
 	maxlength ="40" /><br/>
 	<label>Erscheinungsjahr</label> <input name ="musicerscheinungsjahr" type="text" 

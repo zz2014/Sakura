@@ -175,6 +175,7 @@ function validateForm(that){
 function checkFilmForm(){
 	var input = document.forms["filmform"]["filmtitel"];
 	// check titel with regular expression
+	//only number and alphabet are allowed
 	var form = /[^a-zA-Z0-9]/;
 	 if(form.test(input.value) ){ 
 		alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
@@ -182,13 +183,16 @@ function checkFilmForm(){
 		input.className ="error";
 		return false;
 		}
- 	/* input = document.forms["filmform"]["regie"];
-	var form = /[a-zA-Z]+\s+[a-zA-z]+/;
+ 	input = document.forms["filmform"]["regie"];
+	//two alphabet string separated from a space
+	var form = /[A-Z][a-z]+(\s,)[A-Z][a-z]/;
 	 if(form.test(input.value)){
 	 	alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
 		input.focus();
+		input.className ="error";
 		return false;
-	 }  */
+	 }
+	
 	return true;
 }
 

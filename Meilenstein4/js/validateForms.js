@@ -8,13 +8,19 @@ return false;
 	
 	
 	function isValidInterpreter()
-	{ return true;
-		var x = document.forms["musicForm"]["interpreter"].value;
+	{ //return true;
+		var input = document.forms["musicForm"]["interpreter"];
+		var x= input.value;
 		
 		
 	if(x == null || x == ""){
-	alert("„Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
-		return false;
+	
+		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+
+	
+		input.focus();
+		input.className ="error";
+	return false;
 	}
 	
 	var ausdruck1 = /\S+/;
@@ -23,7 +29,10 @@ return false;
 	var ergebnis2 = ausdruck2.exec(ergebnis);
 	if(ergebnis2 != null)
 	{
+	input.focus();
+		input.className ="error";
 		alert("„Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
+
 		return false;
 	}
 	
@@ -31,6 +40,8 @@ return false;
 	var e3 = a3.exec(ergebnis);
 	if(e3 != null)
 	{
+		input.focus();
+		input.className ="error";
 		alert("_");
 		return false;
 	}
@@ -40,7 +51,8 @@ return false;
 	if(e4 != null)
 	{
 		alert("numbers");
-		return false;
+			input.focus();
+		input.className ="error";
 	}
 	return true;
 	
@@ -50,7 +62,7 @@ return false;
 	
 	function isValidAlbumtitel()
 	{
-	return true;
+	//return true;
 		var y = document.forms["musicForm"]["albumtitel"].value;
 	if(y == null || y == ""){
 		alert("y");
@@ -118,7 +130,7 @@ var Woerter = y.split(" ");
 	
 	
 	function isValidErscheinungsdatum()
-	{ return true;
+	{ //return true;
 		var z = document.forms["musicForm"]["musicerscheinungsjahr"].value;
 	if(z == null || z == ""){
 		alert("z");
@@ -158,6 +170,10 @@ var Woerter = y.split(" ");
 	alert("nix");
 	
 	}
+	
+	function removeClass(that){
+	that.className="";
+}
 	
 	
 	
