@@ -35,15 +35,14 @@ h1{
 
 
 label{
-    	display: inline-block;
+    display: inline-block;
    	float: left;
-    	clear: left;
+    clear: left;
    	width: 170px;
 	color: white;
 	margin: 0.5%;
 	font-size: 14px;
-	vertical_align: text-bottom;
-    	text-align: left;
+    text-align: left;
 	font-weight: bold;
 
 }
@@ -55,7 +54,8 @@ input{
 }
 
 input:focus{
-	 border: 3px solid red;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+
 }
 
 select, textarea{
@@ -73,8 +73,7 @@ select, textarea{
 	color: white;
 	margin: 1.5% 0.5%;
 	font-size: 14px;
-	vertical_align: text-bottom;
-    	text-align: left;
+    text-align: left;
 	font-weight: bold;
 }
 
@@ -90,4 +89,5 @@ img{
 	
 }
 .error{
+		 border: 3px solid red;
 }

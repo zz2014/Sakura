@@ -179,7 +179,7 @@ function checkFilmForm(){
 	 if(form.test(input.value) ){ 
 		alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
 		input.focus();
-		input.className = "error";
+		input.className ="error";
 		return false;
 		}
  	/* input = document.forms["filmform"]["regie"];
@@ -192,10 +192,8 @@ function checkFilmForm(){
 	return true;
 }
 
-function clearClass(){
-var input = document.getElementsByTagName("input");
-input.className = "";
-
+function removeClass(that){
+	that.className="";
 }
 /* function checkMusicForm(){
 

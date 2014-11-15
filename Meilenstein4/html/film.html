@@ -7,7 +7,7 @@
 	<script src="../JS/control.js"></script>
 </head>
 
-<body onload ="clearClass()">
+<body>
 
 <h1> Film</h1>
 <a id="zurueck" href = "home.html">(zur&uumlck)</a>
@@ -21,7 +21,7 @@
 
 
 <label>Filmtitel</label> <input name ="filmtitel" type="text" size="30" 
-	maxlength ="40" /><br/>
+	maxlength ="40"  onblur="removeClass(this)"/><br/>
 	
 <label>Regie</label> <input name="regie" type="text" size="30" 
 	maxlength ="40" /><br/>
