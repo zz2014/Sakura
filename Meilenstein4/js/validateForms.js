@@ -163,17 +163,33 @@ var Woerter = y.split(" ");
 	
 	function isValidSongs()
 	{
-		var z = document.forms["musicForm"]["musicerscheinungsjahr"].value;
-	if(z == null || z == ""){
-		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
-		input.focus();
-		input.className ="error";
-		return false;
+		var input = document.forms["musicForm"]["songs"];
+		var form = /^[a-zA-Z]+(\s[a-zA-Z]+)*$/
+		var tempString = input.value;
+		var songs;
+		if (tempString.indexOf(',') > -1) { 	// check if there is comma in the input
+		songs = tempString.split(',');		// if yes, split into strings
+		for(var song of songs){			// check if every string has the right form
+			if(!form.test(song.trim())){//remove leading space and trailing space
+			alertError(input);
+			return false;
+			}
+		}
+	}else{// if there is no comma in string
+			if(!form.test(tempString)){// check if the string has the right form
+			alertError(input);
+			return false;
+		}
 	}
+	
 	return true;
 	
 	}
-	
+	function alertError(input){
+		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		input.focus();
+		input.className ="error";
+}
 	function removeClass(that){
 	that.className="";
 }

@@ -143,62 +143,7 @@ function getHeads(data){
 	return heads;
 }
 
-//to validate the input according to the id of the table
-function validateForm(that){
 
-//if the id is the film table
-	if(that.id=="filmform"){
-	
-		if(checkFilmForm()){
-		//redirect the window to php page
-			window.location = "http://martinakraus.net/immdb.php";
-			return true;
-		} else{
-		// stop redirecting
-			return false;
-		}
-		} 
-		// to be implemented
-/* 	else {
-		if(checkMusicForm()){
-			window.onbeforeunload =function(){
-			};
-			window.location = "http://martinakraus.net/immdb.php";
-			return true;
-		} else{
-			return false;
-		}
-		} */
-	
-}
-
-function checkFilmForm(){
-	var input = document.forms["filmform"]["filmtitel"];
-	// check titel with regular expression
-	//only number and alphabet are allowed
-	var form = /[^a-zA-Z0-9]/;
-	 if(form.test(input.value) ){ 
-		alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
-		input.focus();
-		input.className ="error";
-		return false;
-		}
- 	input = document.forms["filmform"]["regie"];
-	//two alphabet string separated from a space
-	var form = /[A-Z][a-z]+(\s,)[A-Z][a-z]/;
-	 if(form.test(input.value)){
-	 	alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
-		input.focus();
-		input.className ="error";
-		return false;
-	 }
-	
-	return true;
-}
-
-function removeClass(that){
-	that.className="";
-}
 /* function checkMusicForm(){
 
 } */

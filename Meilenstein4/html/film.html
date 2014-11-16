@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<title>1328903/1332110/1212891</title>
 	<link rel = "stylesheet" href ="../css/form.css"/>
-	<script src="../JS/control.js"></script>
+	<script src="../JS/validateFilmForm.js"></script>
 </head>
 
 <body>
@@ -24,14 +24,14 @@
 	maxlength ="40"  onblur="removeClass(this)"/><br/>
 	
 <label>Regie</label> <input name="regie" type="text" size="30" 
-	maxlength ="40" /><br/>
+	maxlength ="40" onblur="removeClass(this)"/><br/>
 	
 <label>Drehbuch</label> <input name ="drehbuch" type="text" 
-	size="30" maxlength ="40" /><br/>
+	size="30" maxlength ="40" onblur="removeClass(this)" /><br/>
 	
-<label>Erscheinungsjahr </label><input name = "filmerscheinungsjahr" type="text" size="30" maxlength ="40" /><br/>
+<label>Erscheinungsjahr </label><input name = "filmerscheinungsjahr" type="text" size="30" maxlength ="40" onblur="removeClass(this)" /><br/>
 
-<label class="biggerMargin">Schauspieler </label><textarea name = "Schauspieler" cols="30" rows = "5"/>
+<label class="biggerMargin">Schauspieler </label><textarea name = "schauspieler" cols="30" rows = "5"/>
 	</textarea><br/>
 
 	
@@ -47,7 +47,7 @@
 	
 <label>Als Favorit <label> markieren </label></label><input type="checkbox" name="filmfavorit"><br/>
 	
-<label></label><input type="submit" value="Film eintragen"  id ="filmform" onclick="return validateForm(this)">
+<label></label><input type="submit" value="Film eintragen"  id ="filmform" onclick="return validateForm()">
 	</form>
 </div>
 </body>
