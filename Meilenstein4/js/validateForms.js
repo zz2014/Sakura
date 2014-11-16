@@ -15,7 +15,7 @@ return false;
 		
 	if(x == null || x == ""){
 	
-		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		alert("Einige Eingaben sind fehlerhaft. Bitte Ã¼berprÃ¼fen Sie ihre Eingabenâ€œ");
 
 	
 		input.focus();
@@ -31,7 +31,7 @@ return false;
 	{
 		input.focus();
 		input.className ="error";
-		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		alert("Einige Eingaben sind fehlerhaft. Bitte Ã¼berprÃ¼fen Sie ihre Eingabenâ€œ");
 		return false;
 	}
 	
@@ -49,7 +49,7 @@ return false;
 	var e4 = a4.exec(ergebnis);
 	if(e4 != null)
 	{
-		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		alert("Einige Eingaben sind fehlerhaft. Bitte Ã¼berprÃ¼fen Sie ihre Eingabenâ€œ");
 		input.focus();
 		input.className ="error";
 		return false;
@@ -67,7 +67,7 @@ return false;
 		var input = document.forms["musicForm"]["albumtitel"];
 		var y = input.value;
 	if(y == null || y == ""){
-		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		alert("Einige Eingaben sind fehlerhaft. Bitte Ã¼berprÃ¼fen Sie ihre Eingabenâ€œ");
 		input.focus();
 		input.className ="error";
 		return false;
@@ -79,7 +79,7 @@ return false;
 	var erg2 = reg2.exec(erg);
 	if(erg2 != null)
 	{
-		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		alert("Einige Eingaben sind fehlerhaft. Bitte Ã¼berprÃ¼fen Sie ihre Eingabenâ€œ");
 		input.focus();
 		input.className ="error";
 		return false;
@@ -88,7 +88,7 @@ return false;
 	var erg3 = reg3.exec(erg);
 	if(erg3 != null)
 	{
-		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		alert("Einige Eingaben sind fehlerhaft. Bitte Ã¼berprÃ¼fen Sie ihre Eingabenâ€œ");
 		input.focus();
 		input.className ="error";
 		return false;
@@ -113,12 +113,12 @@ var Woerter = y.split(" ");
 		if(ergeb != null)
 		{
 			var ausd2 = /\D+/;
-			document.write(word);
+		
 			ergeb = ausd2.exec(word);
-			document.write(ergeb);
+		
 			if(ergeb!=null)
 			{
-				alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+				alert("Einige Eingaben sind fehlerhaft. Bitte Ã¼berprÃ¼fen Sie ihre Eingabenâ€œ");
 				input.focus();
 				input.className ="error";
 				return false;
@@ -137,7 +137,7 @@ var Woerter = y.split(" ");
 		var input = document.forms["musicForm"]["musicerscheinungsjahr"];
 		var z = input.value;
 	if(z == null || z == ""||!/^\d{4}$/.test(z)){
-		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		alert("Einige Eingaben sind fehlerhaft. Bitte Ã¼berprÃ¼fen Sie ihre Eingabenâ€œ");
 		input.focus();
 		input.className ="error";
 		return false;
@@ -147,14 +147,14 @@ var Woerter = y.split(" ");
 	e=a.exec(z);
 	if(e != null)
 	{
-		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		alert("Einige Eingaben sind fehlerhaft. Bitte Ã¼berprÃ¼fen Sie ihre Eingabenâ€œ");
 		input.focus();
 		input.className ="error";
 		return false;
 	}
 	if(z>2014)
 	{
-		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		alert("Einige Eingaben sind fehlerhaft. Bitte Ã¼berprÃ¼fen Sie ihre Eingabenâ€œ");
 		input.focus();
 		input.className ="error";
 		return false;
@@ -189,7 +189,7 @@ var Woerter = y.split(" ");
 	
 	}
 	function alertError(input){
-		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		alert("Einige Eingaben sind fehlerhaft. Bitte Ã¼berprÃ¼fen Sie ihre Eingabenâ€œ");
 		input.focus();
 		input.className ="error";
 }
