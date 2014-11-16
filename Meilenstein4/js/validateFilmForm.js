@@ -14,11 +14,25 @@ function checkFilmForm(){
 	// check titel with regular expression
 	//only number and alphabet are allowed
 	var input = document.forms["filmform"]["filmtitel"];
-	var form = /^[a-zA-Z0-9 ]+$/;
-	 if(!form.test(input.value) ){ 
-		alertError(input);
-		return false;
+	tempString = input.value;
+	var formLetter = /^[a-zA-Z]+$/;
+	var formNumber = /^[0-9]+$/;
+	if (tempString.indexOf(' ') > -1) { 	// check if there is " " in the input
+			titleParts = tempString.split(' ');		// if yes, split into strings
+		for(var part of titleParts){			// check if every string has the right form
+			if(!formLetter.test(part.trim())){//if the part string are made of letters
+				if(!formNumber.test(part.trim()))// if the part string are only made of numbers
+					{alertError(input);
+					return false;}
+			}
 		}
+	}else{// if there is no comma in string
+			if(!formLetter.test(tempString.trim())){// check if the string has the right form
+				if(!formNumber.test(tempString.trim()))
+					{alertError(input);
+					return false;}
+		}
+	}
 		
 	//check regie
 	//two alphabet string separated from a space
