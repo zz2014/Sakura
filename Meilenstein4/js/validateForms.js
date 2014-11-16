@@ -1,4 +1,4 @@
-function validateMusicForm ()
+Ôªøfunction validateMusicForm ()
 {
 if(isValidInterpreter() && isValidAlbumtitel()  && isValidErscheinungsdatum() && isValidSongs())
 return true;
@@ -8,7 +8,19 @@ return false;
 	
 	
 	function isValidInterpreter()
-	{ //return true;
+	{
+	var input = document.forms["musicForm"]["interpreter"];
+	var form = /^[a-zA-Z√§√º√∂√Ñ√ú√ñ√ü]+(\s[a-zA-Z√§√∂√º√Ñ√ñ√ú√ü]+)*$/;
+	if(!form.test(input.value)){
+	 	alertError(input);
+		return false;
+	 }
+	
+		return true;
+
+	
+	
+	/*  //return true;
 		var input = document.forms["musicForm"]["interpreter"];
 		var x= input.value;
 		
@@ -29,9 +41,10 @@ return false;
 	var ergebnis2 = ausdruck2.exec(ergebnis);
 	if(ergebnis2 != null)
 	{
+		
+		alert("Einige Eingaben sind fehlerhaft. Bitte ®πberpr®πfen Sie ihre Eingaben°∞");
 		input.focus();
 		input.className ="error";
-		alert("Einige Eingaben sind fehlerhaft. Bitte ®πberpr®πfen Sie ihre Eingaben°∞");
 		return false;
 	}
 	
@@ -39,9 +52,10 @@ return false;
 	var e3 = a3.exec(ergebnis);
 	if(e3 != null)
 	{
+		
+		alert("_");
 		input.focus();
 		input.className ="error";
-		alert("_");
 		return false;
 	}
 	
@@ -53,8 +67,7 @@ return false;
 		input.focus();
 		input.className ="error";
 		return false;
-	}
-	return true;
+	} */
 	
 	}
 	
@@ -67,9 +80,7 @@ return false;
 		var input = document.forms["musicForm"]["albumtitel"];
 		var y = input.value;
 	if(y == null || y == ""){
-		alert("Einige Eingaben sind fehlerhaft. Bitte ®πberpr®πfen Sie ihre Eingaben°∞");
-		input.focus();
-		input.className ="error";
+	 	alertError(input);
 		return false;
 	}
 	
@@ -78,19 +89,15 @@ return false;
 	var erg = reg1.exec(y);
 	var erg2 = reg2.exec(erg);
 	if(erg2 != null)
-	{
-		alert("Einige Eingaben sind fehlerhaft. Bitte ®πberpr®πfen Sie ihre Eingaben°∞");
-		input.focus();
-		input.className ="error";
+	{	 	alertError(input);
 		return false;
 	}
 	var reg3 = /_/;
 	var erg3 = reg3.exec(erg);
 	if(erg3 != null)
 	{
-		alert("Einige Eingaben sind fehlerhaft. Bitte ®πberpr®πfen Sie ihre Eingaben°∞");
-		input.focus();
-		input.className ="error";
+			 	alertError(input);
+
 		return false;
 	}
 	
@@ -113,14 +120,11 @@ var Woerter = y.split(" ");
 		if(ergeb != null)
 		{
 			var ausd2 = /\D+/;
-			document.write(word);
 			ergeb = ausd2.exec(word);
-			document.write(ergeb);
 			if(ergeb!=null)
 			{
-				alert("Einige Eingaben sind fehlerhaft. Bitte ®πberpr®πfen Sie ihre Eingaben°∞");
-				input.focus();
-				input.className ="error";
+					 	alertError(input);
+
 				return false;
 			}
 		}
@@ -137,9 +141,8 @@ var Woerter = y.split(" ");
 		var input = document.forms["musicForm"]["musicerscheinungsjahr"];
 		var z = input.value;
 	if(z == null || z == ""||!/^\d{4}$/.test(z)){
-		alert("Einige Eingaben sind fehlerhaft. Bitte ®πberpr®πfen Sie ihre Eingaben°∞");
-		input.focus();
-		input.className ="error";
+			 	alertError(input);
+
 		return false;
 	}
 	
@@ -147,16 +150,14 @@ var Woerter = y.split(" ");
 	e=a.exec(z);
 	if(e != null)
 	{
-		alert("Einige Eingaben sind fehlerhaft. Bitte ®πberpr®πfen Sie ihre Eingaben°∞");
-		input.focus();
-		input.className ="error";
+			 	alertError(input);
+
 		return false;
 	}
 	if(z>2014)
 	{
-		alert("Einige Eingaben sind fehlerhaft. Bitte ®πberpr®πfen Sie ihre Eingaben°∞");
-		input.focus();
-		input.className ="error";
+			 	alertError(input);
+
 		return false;
 	}
 	return true;
@@ -172,12 +173,20 @@ var Woerter = y.split(" ");
 		var songs;
 		if (tempString.indexOf(',') > -1) { 	// check if there is comma in the input
 		songs = tempString.split(',');		// if yes, split into strings
-		for(var song of songs){			// check if every string has the right form
+		/* for(var song of songs){			// check if every string has the right form
 			if(!form.test(song.trim())){//remove leading space and trailing space
 			alertError(input);
 			return false;
 			}
-		}
+		} */
+		songs.foreach(function(song){
+			// form
+			if(!form.test(song.trim())){// remove leading space and trailing
+										// space
+			alertError(input);
+			return false;
+				}
+			});
 	}else{// if there is no comma in string
 			if(!form.test(tempString.trim())){// check if the string has the right form
 			alertError(input);
@@ -189,7 +198,7 @@ var Woerter = y.split(" ");
 	
 	}
 	function alertError(input){
-		alert("Einige Eingaben sind fehlerhaft. Bitte ®πberpr®πfen Sie ihre Eingaben°∞");
+		alert("Einige Eingaben sind fehlerhaft. Bitte √ºberpr√ºfen Sie ihre Eingaben");
 		input.focus();
 		input.className ="error";
 }

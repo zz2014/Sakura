@@ -1,4 +1,4 @@
-//to validate the input according to the id of the table
+﻿//to validate the input according to the id of the table
 function validateForm(){
 		if(checkFilmForm()){
 		//redirect the window to php page
@@ -15,7 +15,7 @@ function checkFilmForm(){
 	//only number and alphabet are allowed
 	var input = document.forms["filmform"]["filmtitel"];
 	tempString = input.value;
-	var formLetter = /^[a-zA-Z]+$/;
+	var formLetter = /^[a-zA-ZäöüÄÖÜß]+$/;
 	var formNumber = /^[0-9]+$/;
 	if (tempString.indexOf(' ') > -1) { 	// check if there is " " in the input
 			titleParts = tempString.split(' ');		// if yes, split into strings
@@ -37,7 +37,7 @@ function checkFilmForm(){
 	//check regie
 	//two alphabet string separated from a space
  	input = document.forms["filmform"]["regie"];
-	form = /^[a-zA-Z]+\s[a-zA-Z]+$/;
+	form = /^[a-zA-ZäöüÄÖÜß]+\s[a-zA-ZäöüÄÖÜß]+$/;
 	 if(!form.test(input.value)){
 	 	alertError(input);
 		return false;
@@ -46,7 +46,7 @@ function checkFilmForm(){
 	 //check drehbuch
 	 //two alphabet string separated from a space
 	 input = document.forms["filmform"]["drehbuch"];
-	form = /^[a-zA-Z]+\s[a-zA-Z]+$/;
+	form = /^[a-zA-ZäöüÄÖÜß]+\s[a-zA-ZäöüÄÖÜß]+$/;
 	 if(!form.test(input.value)){
 	 	alertError(input);
 		return false;
@@ -68,7 +68,7 @@ function checkFilmForm(){
 	
 	//check schauspieler
 	input = document.forms["filmform"]["schauspieler"];
-	form = /^[a-zA-Z]+\s[a-zA-Z]+$/;//name+space+name
+	form = /^[a-zA-ZäöüÄÖÜß]+\s[a-zA-ZäöüÄÖÜß]+$/;//name+space+name
 	var tempString = input.value;
 	var names;
 	if (tempString.indexOf(',') > -1) { 	// check if there is comma in the input
@@ -90,7 +90,7 @@ function checkFilmForm(){
 }
 
 function alertError(input){
-		alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
+		alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
 		input.focus();
 		input.className ="error";
 }
