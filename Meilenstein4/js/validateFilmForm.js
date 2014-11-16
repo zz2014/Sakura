@@ -66,7 +66,7 @@ function checkFilmForm(){
 			}
 		}
 	}else{// if there is no comma in string
-			if(!form.test(tempString)){// check if the string has the right form
+			if(!form.test(tempString.trim())){// check if the string has the right form
 			alertError(input);
 			return false;
 		}
