@@ -108,3 +108,7 @@ p{
 .error{
 		 border: 3px solid red;
 }
+
+form input{
+	outline-color: gray;
+}

@@ -29,10 +29,9 @@ return false;
 	var ergebnis2 = ausdruck2.exec(ergebnis);
 	if(ergebnis2 != null)
 	{
-	input.focus();
+		input.focus();
 		input.className ="error";
-		alert("„Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
-
+		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
 		return false;
 	}
 	
@@ -50,9 +49,10 @@ return false;
 	var e4 = a4.exec(ergebnis);
 	if(e4 != null)
 	{
-		alert("numbers");
-			input.focus();
+		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		input.focus();
 		input.className ="error";
+		return false;
 	}
 	return true;
 	
@@ -65,7 +65,9 @@ return false;
 	//return true;
 		var y = document.forms["musicForm"]["albumtitel"].value;
 	if(y == null || y == ""){
-		alert("y");
+		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		input.focus();
+		input.className ="error";
 		return false;
 	}
 	
@@ -75,14 +77,18 @@ return false;
 	var erg2 = reg2.exec(erg);
 	if(erg2 != null)
 	{
-		alert("y sonderzeichen");
+		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		input.focus();
+		input.className ="error";
 		return false;
 	}
 	var reg3 = /_/;
 	var erg3 = reg3.exec(erg);
 	if(erg3 != null)
 	{
-		alert("_");
+		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		input.focus();
+		input.className ="error";
 		return false;
 	}
 	
@@ -102,28 +108,23 @@ var Woerter = y.split(" ");
 		var word = Woerter[i];
 
 		var ergeb = ausd.exec(word);
-		document.write(ergeb);
-		alert("nösc");
 		if(ergeb != null)
 		{
-		alert("nös");
 			var ausd2 = /\D+/;
-			alert("nö");
 			document.write(word);
 			ergeb = ausd2.exec(word);
 			document.write(ergeb);
-			alert("n");
 			if(ergeb!=null)
 			{
-				alert("y");
-
+				alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+				input.focus();
+				input.className ="error";
 				return false;
 			}
 		}
 		i++;
 		
 	}
-	alert("nöscht");
 	return true;
 	
 	}
@@ -133,7 +134,9 @@ var Woerter = y.split(" ");
 	{ //return true;
 		var z = document.forms["musicForm"]["musicerscheinungsjahr"].value;
 	if(z == null || z == ""){
-		alert("z");
+		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		input.focus();
+		input.className ="error";
 		return false;
 	}
 	
@@ -141,12 +144,16 @@ var Woerter = y.split(" ");
 	e=a.exec(z);
 	if(e != null)
 	{
-		alert("Pech");
+		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		input.focus();
+		input.className ="error";
 		return false;
 	}
 	if(z>2014)
 	{
-		alert("too late");
+		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		input.focus();
+		input.className ="error";
 		return false;
 	}
 	return true;
@@ -156,18 +163,14 @@ var Woerter = y.split(" ");
 	
 	function isValidSongs()
 	{
-		alert("hmm");
-		var z = document.getElementById("taSongs");
-		document.write(z);
-		z= z.value;
-		document.write(z);
-		alert("hmm");
-	if(z == null || z == "")
-	{
-		alert("z");
+		var z = document.forms["musicForm"]["musicerscheinungsjahr"].value;
+	if(z == null || z == ""){
+		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
+		input.focus();
+		input.className ="error";
 		return false;
 	}
-	alert("nix");
+	return true;
 	
 	}
 	
