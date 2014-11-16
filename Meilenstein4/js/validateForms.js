@@ -64,7 +64,7 @@ return false;
 	{
 	//return true;
 	
-		var input = document.forms["musicForm"]["albumtitel"].value;
+		var input = document.forms["musicForm"]["albumtitel"];
 		var y = input.value;
 	if(y == null || y == ""){
 		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
@@ -134,9 +134,9 @@ var Woerter = y.split(" ");
 	
 	function isValidErscheinungsdatum()
 	{ //return true;
-		var input = document.forms["musicForm"]["musicerscheinungsjahr"].value;
+		var input = document.forms["musicForm"]["musicerscheinungsjahr"];
 		var z = input.value;
-	if(z == null || z == ""){
+	if(z == null || z == ""||!/^\d{4}$/.test(z)){
 		alert("Einige Eingaben sind fehlerhaft. Bitte ¨¹berpr¨¹fen Sie ihre Eingaben¡°");
 		input.focus();
 		input.className ="error";
