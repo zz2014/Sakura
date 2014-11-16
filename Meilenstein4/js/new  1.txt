@@ -1,0 +1,12 @@
+function isValidInterpreter()
+	{
+	var input = document.forms["musicForm"]["interpreter"];
+	var form = /^[a-zA-ZäüöÄÜÖß]+(\s[a-zA-ZäöüÄÖÜß]+)*$/;
+	if(!form.test(input.value)){
+	 	alertError(input);
+		return false;
+	 }
+	
+		return true;
+	}
+	
