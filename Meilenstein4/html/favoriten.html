@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8"/>
 	<title>1328903/1332110/1212891</title>
 	<script src="../JS/music_json.js"></script>
-		<script src="../JS/film_json.js"></script>
-		<script src="../JS/control.js"></script>
-		<link rel = "stylesheet" href ="../css/favoriten.css"/>
+	<script src="../JS/film_json.js"></script>
+	<script src="../JS/control.js"></script>
+	<link rel = "stylesheet" href ="../css/favoriten.css"/>
 </head>
+
 <body onload ="init()" >
-<img src="../image/MeeresschneckeSakura.jpg" width="220" height="195" alt="">
-<div class = "content">
 
-<h1><span>M</span>eine <span>F</span>avoriten</h1>
-
+	<img src="../image/MeeresschneckeSakura.jpg" width="220" height="195" alt="">
+	
+	<div class = "content">
+		<h1><span>M</span>eine <span>F</span>avoriten</h1>
+		
 		<div id="leftbox" onclick ="switchlist(this)" onmouseover = "hover(this)" onmouseout = "unhover(this)">
 			<p class="buttontext" onmouseover = "hover(this)">Meine Musikfavoriten</p>
 		</div>
+		
 		<div id="rightbox" onclick ="switchlist(this)" onmouseover = "hover(this)" onmouseout = "unhover(this)">
 			<p class= "buttontext">Meine Filmfavoriten</p>
 		</div>
-
-
+		
+		<table id = "filmTable" ></table>
+		<table id = "musicTable"></table>
+	</div>
 	
-
-
- <table id = "filmTable" >
- </table>
- <table id = "musicTable">
- </table>
- </div>
 </body>
-
 
 </html>
 
