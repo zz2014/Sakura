@@ -1,9 +1,25 @@
-﻿	function validateMusicForm ()
+﻿	var counter = 0;
+	
+	function validateMusicForm ()
 	{
-		if(isValidInterpreter() && isValidAlbumtitel()  && isValidErscheinungsdatum() && isValidSongs())
+	removeClass();
+		var validInterpreter = isValidInterpreter();
+		var validTitel = isValidAlbumtitel();
+		var validDate = isValidErscheinungsdatum();
+		var validSongs = isValidSongs();
+		
+		if(validInterpreter && validTitel  && validDate && validSongs)
+		{
+			
+			counter = 0;
 			return true;
+		}
 		else
+		{
+			alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
+			counter = 0;
 			return false;
+		}
 	}
 	
 	function isValidInterpreter()
@@ -48,9 +64,7 @@
 		var input = document.forms["musicForm"]["musicerscheinungsjahr"];
 		var z = input.value;
 		if(z == null || z == ""||!/^\d{4}$/.test(z)){
-			alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
-			input.focus();
-			input.className ="error";
+			alertError(input);
 			return false;
 		}
 	
@@ -58,16 +72,12 @@
 		e=a.exec(z);
 		if(e != null)
 		{
-			alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
-			input.focus();
-			input.className ="error";
+			alertError(input);
 			return false;
 		}
 		if(z>2014)
 		{
-			alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
-			input.focus();
-			input.className ="error";
+			alertError(input);
 			return false;
 		}
 		return true;
@@ -97,12 +107,17 @@
 	}
 	
 	function alertError(input){
-		alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
+		if(counter <= 0)
 		input.focus();
+		
 		input.className ="error";
+		counter ++;
 	}
 
-	function removeClass(that){
-		that.className="";
+	function removeClass(){
+		document.forms["musicForm"]["interpreter"].className="";
+		document.forms["musicForm"]["albumtitel"].className="";
+		document.forms["musicForm"]["musicerscheinungsjahr"].className="";
+		document.forms["musicForm"]["songs"].className="";
 	}
 	
