@@ -2,7 +2,7 @@
 	
 	function validateMusicForm ()
 	{
-	removeClass();
+		removeClass();
 		var validInterpreter = isValidInterpreter();
 		var validTitel = isValidAlbumtitel();
 		var validDate = isValidErscheinungsdatum();

@@ -17,19 +17,19 @@
 <img id="logo"  src="../image/MeeresschneckeSakura.jpg" width="300" height="250" alt="">
 
 <div>
-	<form action = "http://martinakraus.net/immdb.php" method = "get" name="filmform">
+	<form action = "http://martinakraus.net/immdb.php" method = "get" name="filmform" onsubmit="return validateFilmForm()">
 
 
 <label>Filmtitel</label> <input name ="filmtitel" type="text" size="30" 
-	maxlength ="40"  onblur="removeClass(this)"/><br/>
+	maxlength ="40"  <br/>
 	
 <label>Regie</label> <input name="regie" type="text" size="30" 
-	maxlength ="40" onblur="removeClass(this)"/><br/>
+	maxlength ="40" <br/>
 	
 <label>Drehbuch</label> <input name ="drehbuch" type="text" 
-	size="30" maxlength ="40" onblur="removeClass(this)" /><br/>
+	size="30" maxlength ="40" <br/>
 	
-<label>Erscheinungsjahr </label><input name = "filmerscheinungsjahr" type="text" size="30" maxlength ="40" onblur="removeClass(this)" /><br/>
+<label>Erscheinungsjahr </label><input name = "filmerscheinungsjahr" type="text" size="30" maxlength ="40" <br/>
 
 <label class="biggerMargin">Schauspieler </label><textarea name = "schauspieler" cols="30" rows = "5">
 	</textarea><br/>
@@ -47,7 +47,7 @@
 	
 <label>Als Favorit <label> markieren </label></label><input type="checkbox" name="filmfavorit"><br/>
 	
-<label></label><input type="submit" value="Film eintragen"  id ="filmform" onclick="return validateForm()">
+<label></label><input type="submit" value="Film eintragen"  id ="filmform">
 	</form>
 </div>
 </body>

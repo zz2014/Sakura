@@ -1,15 +1,29 @@
-﻿//to validate the input according to the id of the table
-function validateForm(){
-	if(checkFilmForm()){
-		//redirect the window to php page
-		window.location = "http://martinakraus.net/immdb.php";
-		return true;
-	} else{
-		return false;		// stop redirecting
-	}
-}
+﻿var counter = 0;
 
-function checkFilmForm(){
+//to validate the input according to the id of the table
+function validateFilmForm ()
+	{	
+		removeClass();
+		var validTitel = isValidTitel();
+		var validRegie = isValidRegie();
+		var validDrehbuch= isValidDrehbuch();
+		var validJahr = isValidJahr();
+		var validSchauspieler = isValidSchauspieler();
+		
+		if(validTitel && validRegie  && validDrehbuch && validJahr && validSchauspieler)
+		{
+			counter = 0;
+			return true;
+		}
+		else
+		{
+			alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben“");
+			counter = 0;
+			return false;
+		}
+	}
+
+function isValidTitel(){
 	// check titel with regular expression
 	//only number and alphabet are allowed
 	var input = document.forms["filmform"]["filmtitel"];
@@ -34,7 +48,10 @@ function checkFilmForm(){
 			}
 		}
 	}
-		
+	return true;
+}
+
+function isValidRegie(){	
 	//check regie
 	//two alphabet string separated from a space
  	input = document.forms["filmform"]["regie"];
@@ -43,7 +60,10 @@ function checkFilmForm(){
 	 	alertError(input);
 		return false;
 	 }
-	 
+	 return true;
+}
+
+function isValidDrehbuch(){
 	 //check drehbuch
 	 //two alphabet string separated from a space
 	input = document.forms["filmform"]["drehbuch"];
@@ -52,7 +72,10 @@ function checkFilmForm(){
 	 	alertError(input);
 		return false;
 	 }
-	 
+	 return true;
+}
+
+function isValidJahr(){ 
 	 //check erscheinungsjahr
 	 //only 4 digit number, can't be larger than current year
 	 input = document.forms["filmform"]["filmerscheinungsjahr"];
@@ -66,7 +89,10 @@ function checkFilmForm(){
 		alertError(input);
 		return false;
 	}
-	
+	return true;
+}
+
+function isValidSchauspieler(){
 	//check schauspieler
 	input = document.forms["filmform"]["schauspieler"];
 	form = /^[a-zA-ZäöüÄÖÜß]+\s[a-zA-ZäöüÄÖÜß]+$/;//name+space+name
@@ -89,12 +115,19 @@ function checkFilmForm(){
 	return true;
 }
 
+
 function alertError(input){
-		alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
+		if(counter <= 0)
 		input.focus();
+		
 		input.className ="error";
+		counter ++;
 }
 
-function removeClass(that){
-	that.className="";
+function removeClass(){
+		document.forms["filmform"]["filmtitel"].className="";
+		document.forms["filmform"]["regie"].className="";
+		document.forms["filmform"]["drehbuch"].className="";
+		document.forms["filmform"]["filmerscheinungsjahr"].className="";
+		document.forms["filmform"]["schauspieler"].className="";
 }
