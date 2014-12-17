@@ -1,0 +1,128 @@
+body{
+	background-color : rgb(26,32,94);
+	font-family: "Arial";
+	padding: 0%;
+	margin: 0%;
+}
+
+h1{
+	color: white;
+	font-size: 36px;
+	margin-left: 31%;
+	
+	
+}
+
+
+a{
+	text-decoration: none;
+}
+
+.buttontext:hover{
+	color: black !important;
+}
+}
+
+.buttontext{
+	font-weight: bold;
+	color:white;
+}
+
+div span{
+	color: rgb(136,0,21);
+}
+
+table {
+	border: 8px solid white;
+	border-collapse: collapse;
+	
+}
+#musicTable{
+	margin-top: 10%;
+	margin-left: 12%;
+}
+
+#filmTable{
+	margin: 10%;
+}
+
+
+td{
+	border-bottom: 4px solid white;
+	border-right: 8px solid white;
+	color: white;
+	padding: 7px 25px 7px 15px;
+}
+
+th{
+	color: rgb(136,0,21);
+	border: 8px solid white;
+	padding-left: 21px;
+	padding-right: 68px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	
+}
+
+img{
+	
+	float: right;
+	margin-right:35px;
+	margin-top: 0px
+	
+	
+	
+}
+
+#leftbox{
+	float: left; 	/*bewirkt, dass sie nebeneinander stehen*/
+	width: 250px;
+	height:50px;
+	margin-left: 20%;
+	margin-top: 40px;
+	margin-bottom: 50px;
+	border: 8px solid white;
+	border-right: 1px solid white;
+	display: inline-block;
+	
+	
+	
+}
+
+#leftbox:hover{
+	background-color: rgb(165,169,230) !important;
+}
+#rightbox{
+	float: left;
+	width: 250px;
+	height:50px;
+	margin-top: 40px;
+	margin-bottom: 50px;
+	border: 8px solid white;
+	border-left: 1px solid white;
+	
+	
+
+}
+
+#rightbox:hover{
+	background-color: rgb(165,169,230) !important;
+}
+
+.content{
+	width:100%;
+}
+
+p{
+	font-size : 16px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+.blue {
+ color: rgb(0,162,232);
+}
+.inactive{
+	display:none;
+}

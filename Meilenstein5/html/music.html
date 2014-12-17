@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>1328903/1332110/1212891</title>
+	<link rel = "stylesheet" href ="../css/form.css"/>
+	<script src="../JS/validateMusicForm.js"></script>
+</head>
+
+<body >
+<h1>Music</h1>
+<a id ="zurueck" href = "home.html">(zur&uumlk)</a>
+<br/>
+<a id ="favlink" href = "favoritenphp.html">Meine Favoriten</a>
+
+<img id="logo"  src="../image/MeeresschneckeSakura.jpg" width="300" height="250" alt="">
+
+<div>
+	<form action = "../php/immdb.php" method = "get" name="musicForm" onsubmit="return validateMusicForm()">
+	<label>Interpreter</label> <input name ="interpreter" type="text" size="30" 
+	maxlength ="40" onblur="removeClass(this)" /><br/>
+	<label>Albumtitel</label> <input name="albumtitel" type="text" size="30" 
+	maxlength ="40" onblur="removeClass(this)" /><br/>
+	<label>Erscheinungsjahr</label> <input name ="musicerscheinungsjahr" type="text" 
+	size="30" maxlength ="40" onblur="removeClass(this)" /><br/>
+	<label class="biggerMargin">Songs </label><textarea name = "songs" cols="31" rows = "5" onblur="removeClass(this)"/>
+	</textarea><br/>
+
+	<label class="biggerMargin">Genre</label> 
+	<select name="musicgenre" size="1">
+		<option value="Punk" selected ="selected">Punk</option>
+		<option value="Metal">Metal</option>
+		<option value="Pop">Pop</option>
+		<option value="Soul">Soul</option>
+		<option value="HipHop">HipHop</option>
+		<option value="Techno">Techno</option>
+	</select><br/>
+
+	<label>Als Favorit <label>markieren</label></label>
+	<input type="checkbox" name="musicfavorit">
+	<br/>
+	
+	<label></label>
+	<input type="submit" value="Album eintragen">
+	</form>
+</div>
+</body>
+</html>
