@@ -30,12 +30,15 @@ if (isset($params["filmtitel"]))
 	fwrite ( $handle, ",");
 	echo "Favorit: " .$params["filmfavorit"]."<br>";
 	fwrite ( $handle, $params["filmfavorit"]);
+	fclose ( $handle );
+	exit;
 	
 }
 
 
 if (isset($params["albumtitel"]))
 {
+	$handle = fopen ( "music.txt", "r+" );
 	echo "Abgeschickte Daten: "."<br>";
 	echo "Interpreter: " .$params["interpreter"]."<br>";
 	fwrite ( $handle, $params["interpreter"]);
@@ -54,6 +57,8 @@ if (isset($params["albumtitel"]))
 	fwrite ( $handle, ",");
 	echo "Favorit: " .$params["musicfavorit"]."<br>";
 	fwrite ( $handle, $params["musicfavorit"]);
+	fclose ( $handle );
+	exit;
 }
 
 
