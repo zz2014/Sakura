@@ -7,7 +7,7 @@ function showFavorites(that) {
   var table;
   var tableId;
   var music = document.getElementById("leftbox");
-var film = document.getElementById("rightbox");
+  var film = document.getElementById("rightbox");
   if(that.id =="leftbox")
   {table = "alben";
   tableId ="musicTable";

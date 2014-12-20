@@ -1,17 +1,54 @@
-
 /* var filmselected = true;
 var musicselected = false; */
 //two tables will be built when loading the page
 function init(){
-buildMusicTable();
-buildFilmTable();
-document.getElementById("rightbox").style.background="rgb(0,162,232)";
-document.getElementById("rightbox").firstElementChild.style.color="black";
-document.getElementById('filmTable').style.display = "table";
-document.getElementById('musicTable').style.display = "none";
+showFavorites(document.getElementById("rightbox"));
 }
 
-function switchlist (that){
+function showFavorites(that) {
+  var table;
+  var tableId;
+  var music = document.getElementById("leftbox");
+  var film = document.getElementById("rightbox");
+  if(that.id =="leftbox")
+  {table = "alben";
+  tableId ="musicTable";
+  film.style.background="rgb(26,32,94)";
+  music.style.background="rgb(0,162,232)";
+	music.firstElementChild.style.color ="black";
+	film.firstElementChild.style.color ="white";
+  document.getElementById('filmTable').style.display = "none";
+  document.getElementById('musicTable').style.display = "table";
+  }
+  else
+  {table = "filme"
+	tableId ="filmTable"
+	music.style.background="rgb(26,32,94)";
+	film.style.background="rgb(0,162,232)";
+	music.firstElementChild.style.color ="white";
+	film.firstElementChild.style.color ="black";
+	document.getElementById('filmTable').style.display = "table";
+    document.getElementById('musicTable').style.display = "none";
+	
+  }
+  if (window.XMLHttpRequest) { 
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else { // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  ;
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      var data = JSON.parse(xmlhttp.responseText);
+	    buildTable(data,document.getElementById(tableId));
+    }
+  }
+  xmlhttp.open("GET","../php/getFavorites.php?t="+table,true);
+  xmlhttp.send();
+}
+
+/* function switchlist (that){
 	var music = document.getElementById("leftbox");
 	var film = document.getElementById("rightbox");
 	if(that.id == "rightbox"){//falls rechte Box angeklickt
@@ -22,7 +59,7 @@ function switchlist (that){
 	document.getElementById('filmTable').style.display = "table";
 	document.getElementById('musicTable').style.display = "none";
 	/* filmselected = true;
-	musicselected = false; */
+	musicselected = false; 
 	} else{  
 	film.style.background="rgb(26,32,94)";
 	music.style.background="rgb(0,162,232)";
@@ -31,11 +68,11 @@ function switchlist (that){
 	document.getElementById('filmTable').style.display = "none";
 	document.getElementById('musicTable').style.display = "table";
 	/* filmselected = false;
-	musicselected = true; */
-	}
-}
+	musicselected = true; 
+} }*/
+	
 //append table heads and data to the table
-function buildFilmTable(){
+/* function buildFilmTable(){
 
 	var filmen = filmdata["Filme"];
 	var myTable = document.getElementById('filmTable');
@@ -50,7 +87,7 @@ function buildMusicTable(){
 	var myTable = document.getElementById('musicTable');
 	buildTable(alben, myTable);
 
-}
+} */
 
 function buildTable(data, table){
 // add all the table heads first
@@ -97,4 +134,3 @@ function getHeads(data){
 	}
 	return heads;
 }
-

@@ -7,7 +7,9 @@ $content = '../js/'.$tableName.'.json';
 $json = file_get_contents($content);
 // read json into php array
 $tableData = json_decode($json,true);
-$n = 0;
+echo json_encode($tableData);
+
+/* $n = 0;
 $m = 0;
 
 echo '<table>';
@@ -33,5 +35,5 @@ $heads = $tableData[$n];
 	$m=0;
     $n++; 
 }
-echo '</table>';
+echo '</table>'; */
 ?>
