@@ -1,93 +1,60 @@
 
+
 <?php
 
 if($_SERVER["REQUEST_METHOD"]=="GET"){
 $params = $_GET;
 }
-echo 'Deine Eingabe in Film ist: '."<br>";
+
 if (isset($params["filmtitel"]))
 {
- echo 'Filmtitel:'. $params["filmtitel"]."<br>";
-}else{
-  echo 'Filmtitel:'."<br>";
-} 
-
-if (isset($params["regie"]))
-{
- echo "Regie: ", $params["regie"]."<br>";
-}else{
-  echo 'Regie:'."<br>";
-} 
-
-if (isset($params["drehbuch"]))
-{
- echo "Drehbuch: ", $params["drehbuch"]."<br>";
-}else{
-  echo 'Drehbuch:'."<br>";
-} 
-
-if (isset($params["filmerscheinungsjahr"]))
-{
- echo "Filmerscheinungsjahr: ", $params["filmerscheinungsjahr"]."<br>";
-}else{
-  echo 'Filmerscheinungsjahr:'."<br>";
-} 
-
-if (isset($params["schauspieler"]))
-{
- echo "Schauspieler: ", $params["schauspieler"]."<br>";
-}else{
-  echo 'Schauspieler:'."<br>";
-}
-
-if (isset($params["filmgenre"]))
-{
- echo "Filmgenre: ", $params["filmgenre"]."<br>";
-}else{
-  echo 'Filmgenre:'."<br>";
-}
-
-if (isset($params["filmfavorit"]))
-{
- echo "Favorit: ", $params["filmfavorit"]."<br>";
-}else{
-  echo 'Favorit:'."<br>";
+	$handle = fopen ( "film.txt", "r+" );
+	echo "Abgeschickte Daten: "."<br>";
+	echo "Filmtitel: " .$params["filmtitel"]."<br>";
+	fwrite ( $handle, $params["filmtitel"]);
+	fwrite ( $handle, ",");
+	echo "Regie: " .$params["regie"]."<br>";
+	fwrite ( $handle, $params["regie"]);
+	fwrite ( $handle, ",");
+	echo "Drehbuch: " .$params["drehbuch"]."<br>";
+	fwrite ( $handle, $params["drehbuch"]);
+	fwrite ( $handle, ",");
+	echo "Filmerscheinungsjahr: ", $params["filmerscheinungsjahr"]."<br>";
+	fwrite ( $handle, $params["filmerscheinungsjahr"]);
+	fwrite ( $handle, ",");
+	echo "Schauspieler: " .$params["schauspieler"]."<br>";
+	fwrite ( $handle, $params["schauspieler"]);
+	fwrite ( $handle, ",");
+	echo "Filmgenre: " .$params["filmgenre"]."<br>";
+	fwrite ( $handle, $params["filmgenre"]);
+	fwrite ( $handle, ",");
+	echo "Favorit: " .$params["filmfavorit"]."<br>";
+	fwrite ( $handle, $params["filmfavorit"]);
+	
 }
 
 
-echo 'Deine Eingabe in Musik ist: '."<br>";
-if (isset($params["interpreter"]))
+if (isset($params["albumtitel"]))
 {
- echo 'Interpreter:'. $params["interpreter"]."<br>";
-}else{
-  echo 'Interpreter:'."<br>";
+	echo "Abgeschickte Daten: "."<br>";
+	echo "Interpreter: " .$params["interpreter"]."<br>";
+	fwrite ( $handle, $params["interpreter"]);
+	fwrite ( $handle, ",");
+	echo "Albumtitel: " .$params["albumtitel"]."<br>";
+	fwrite ( $handle, $params["albumtitel"]);
+	fwrite ( $handle, ",");
+	echo "Erscheinungsjahr: ", $params["musicerscheinungsjahr"]."<br>";
+	fwrite ( $handle, $params["musicerscheinungsjahr"]);
+	fwrite ( $handle, ",");
+	echo "Songs:" .$params["songs"]. "<br>";
+	fwrite ( $handle, $params["songs"]);
+	fwrite ( $handle, ",");
+	echo "Genre: " .$params["musicgenre"]."<br>";
+	fwrite ( $handle, $params["musicgenre"]);
+	fwrite ( $handle, ",");
+	echo "Favorit: " .$params["musicfavorit"]."<br>";
+	fwrite ( $handle, $params["musicfavorit"]);
 }
 
-if (isset($params["interpreter"]))
-{
- echo "Albumtitel: ", $params["albumtitel"]."<br>";
-}else{
-  echo 'Albumtitel:'."<br>";
-}
 
-if (isset($params["musicerscheinungsjahr"]))
-{
- echo "Erscheinungsjahr: ", $params["musicerscheinungsjahr"]."<br>";
-}else{
-  echo 'Erscheinungsjahr:'."<br>";
-}
-
-if (isset($params["musicgenre"]))
-{
- echo "Genre: ", $params["musicgenre"]."<br>";
-}else{
-  echo 'Genre:'."<br>";
-}
-
-if (isset($params["musicfavorit"]))
-{
- echo "Favorit: ", $params["musicfavorit"]."<br>";
-}else{
-  echo 'Favorit:'."<br>";
-}
 ?>
