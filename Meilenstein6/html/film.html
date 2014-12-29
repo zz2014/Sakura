@@ -1,0 +1,54 @@
+ï»¿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>1328903/1332110/1212891</title>
+	<link rel = "stylesheet" href ="../css/form.css"/>
+	<script src="../JS/validateFilmForm.js"></script>
+</head>
+
+<body>
+
+<h1> Film</h1>
+<a id="zurueck" href = "home.html">(zur&uumlck)</a>
+<br/>
+<a id ="favlink" href = "favoritenphp.html">Meine Favoriten</a>
+
+<img id="logo"  src="../image/MeeresschneckeSakura.jpg" width="300" height="250" alt="">
+
+<div>
+	<form action = "../php/immdb.php" method = "get" name="filmform">
+
+
+<label>Filmtitel</label> <input name ="filmtitel" type="text" size="30" 
+	maxlength ="40"  onblur="removeClass(this)"/><br/>
+	
+<label>Regie</label> <input name="regie" type="text" size="30" 
+	maxlength ="40" onblur="removeClass(this)"/><br/>
+	
+<label>Drehbuch</label> <input name ="drehbuch" type="text" 
+	size="30" maxlength ="40" onblur="removeClass(this)" /><br/>
+	
+<label>Erscheinungsjahr </label><input name = "filmerscheinungsjahr" type="text" size="30" maxlength ="40" onblur="removeClass(this)" /><br/>
+
+<label class="biggerMargin">Schauspieler </label><textarea name = "schauspieler" cols="30" rows = "5"/>
+	</textarea><br/>
+
+	
+<label class="biggerMargin">Genre</label> 
+	<select name="filmgenre" size="1">
+		<option value="Horror" selected ="selected">Horror</option>
+		<option value="Psycho">Psycho</option>
+		<option value="Krimi">Krimi</option>
+		<option value="Doku">Doku</option>
+		<option value="Komödie">Kom&#246;die</option>
+		<option value="Romanze">Romanze</option>
+	</select><br/>
+	
+<label>Als Favorit <label> markieren </label></label><input type="checkbox" name="filmfavorit"><br/>
+	
+<label></label><input type="submit" value="Film eintragen"  id ="filmform" onclick="return validateForm()">
+	</form>
+</div>
+</body>
+</html>
